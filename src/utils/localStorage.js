@@ -158,8 +158,6 @@ export const saveTasks = (tasks) => {
     }
   };
 
-  // Add these functions to your existing localStorage.js file
-
 export const saveUserProgress = (progress) => {
   try {
     localStorage.setItem('userProgress', JSON.stringify(progress));
