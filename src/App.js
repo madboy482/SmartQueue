@@ -957,6 +957,10 @@ function AppContent() {
           darkMode={darkMode}
         />
       )}
+      <footer className={`mt-12 py-6 text-center ${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>
+         <p>TaskOptimize - Using Knapsack Algorithm & Merge Sort</p>
+         <p className="mt-1">Made with ❤️ for efficient productivity by Team AndroNova </p>
+      </footer>
     </div>
   );
 }
