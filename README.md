@@ -1,72 +1,162 @@
-# Smart_Prioritizer
+<div align="center">
+  
+# 🚀 SmartQueue
 
-# Getting Started with Create React App
+### Intelligent Task Prioritization Powered by Algorithms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![React](https://img.shields.io/badge/React-v18-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-95.9%25-yellow)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
 
-## Available Scripts
+[Key Features](#-key-features) • 
+[Demo](#-live-demo) • 
+[Technical Highlights](#-technical-highlights) • 
+[Installation](#-installation) • 
+[Screenshots](#-screenshots) • 
+[Future Enhancements](#-future-enhancements)
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**SmartQueue** is not just another task manager. It's an intelligent productivity system that uses the Knapsack algorithm to automatically prioritize your tasks based on importance and available time. With real-time algorithm visualization, gamification features, and an elegant UI, SmartQueue transforms task management from a chore into an engaging experience.
 
-### `npm test`
+> "Managing time isn't about squeezing more tasks into your day, but about prioritizing the ones that truly matter." — SmartQueue Philosophy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🎯 Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Algorithmic Task Prioritization** - Automatically schedules your most important tasks within your available time
+- **Real-time Algorithm Visualization** - Watch sorting and optimization algorithms work their magic
+- **Gamification Elements** - Level up, earn badges, and stay motivated with built-in rewards
+- **Deadline Management** - Set and track deadlines with intuitive visual feedback
+- **Smart Time Allocation** - Optimize your available time for maximum productivity
+- **Dark/Light Mode** - Easy on the eyes, any time of day
+- **Productivity Analytics** - Track your performance metrics and optimization results
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 Technical Highlights
 
-### `npm run eject`
+| Feature | Implementation |
+|---------|----------------|
+| **Task Optimization** | Knapsack algorithm (O(n*W) complexity) for optimal task selection within time constraints |
+| **Task Sorting** | Merge Sort algorithm (O(n log n) complexity) for efficient list management |
+| **State Management** | React Context API for centralized gamification and user progress tracking |
+| **Data Persistence** | Local storage implementation with robust error handling |
+| **Performance** | Optimized rendering with React memo and callbacks |
+| **Accessibility** | WCAG-compliant color schemes and keyboard navigation |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```javascript
+// Example of our Knapsack algorithm implementation
+const knapsackOptimization = (tasks, timeLimit) => {
+  // Create DP table
+  const dp = Array(n + 1).fill().map(() => Array(timeLimit + 1).fill(0));
+  
+  // Fill dp table (simplified)
+  for (let i = 1; i <= tasks.length; i++) {
+    for (let w = 0; w <= timeLimit; w++) {
+      if (tasks[i-1].time <= w) {
+        dp[i][w] = Math.max(
+          dp[i-1][w], 
+          dp[i-1][w-tasks[i-1].time] + tasks[i-1].importance
+        );
+      } else {
+        dp[i][w] = dp[i-1][w];
+      }
+    }
+  }
+  
+  // Return optimized selection
+  return backtrack(dp, tasks, timeLimit);
+};
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Live Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Experience SmartQueue firsthand with our live demo!
 
-## Learn More
+🔗 [Launch Demo](https://smart-queue.netlify.app/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📋 Installation
 
-### Code Splitting
+```bash
+# Clone the repository
+git clone https://github.com/madboy482/SmartQueue.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Navigate to the project directory
+cd SmartQueue
 
-### Analyzing the Bundle Size
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Start the development server
+npm start
+```
 
-### Making a Progressive Web App
+The application will be available at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📱 Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<div align="center">
+  <img src="screenshots/Screenshot%20(38).png" alt="Task Dashboard" width="45%"/>
+  <img src="screenshots/Screenshot%20(41).png" alt="Algorithm Visualization" width="45%"/>
+</div>
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔬 Under the Hood
 
-### `npm run build` fails to minify
+SmartQueue combines the power of classic computer science algorithms with modern web development practices:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Algorithms**: Implementation of Merge Sort for task sorting and 0/1 Knapsack for time optimization
+- **Frontend**: React.js with functional components and hooks
+- **Styling**: Tailwind CSS for responsive design
+- **Animation**: CSS transitions and custom animation framework
+- **Data Flow**: Unidirectional data flow with React Context
+
+---
+
+## 🚀 Future Enhancements
+
+- [ ] Cloud synchronization
+- [ ] Mobile applications
+- [ ] Team collaboration features
+- [ ] AI-powered task suggestions
+- [ ] Advanced analytics dashboard
+- [ ] Calendar integration
+- [ ] Voice commands
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m 'Added new feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <p>Built with ❤️ by <b>Team AndroNova</b></p>
+</div>
