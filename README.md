@@ -109,8 +109,21 @@ The application will be available at `http://localhost:3000`
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="screenshots/Screenshot%20(38).png" alt="Task Dashboard" width="45%"/>
-  <img src="screenshots/Screenshot%20(41).png" alt="Algorithm Visualization" width="45%"/>
+  <p>
+    <img src="screenshots/Screenshot%20(38).png" alt="Task Dashboard" width="48%"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="screenshots/Screenshot%20(39).png" alt="Add Tasks" width="48%"/>
+  </p> 
+  <p>
+    <img src="screenshots/Screenshot%20(40).png" alt="Tasks List" width="48%"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="screenshots/Screenshot%20(41).png" alt="Optimized Tasks List" width="48%"/>
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%20(43).png" alt="Timer Feature" width="48%"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="screenshots/Screenshot%20(42).png" alt="Gamifications" width="48%"/>
+  </p>
 </div>
 
 ---
@@ -159,4 +172,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
   <p>Built with ❤️ by <b>Team AndroNova</b></p>
+  <p>
+    <a href="https://github.com/madboy482">madboy482</a> • 
+    <a href="https://github.com/krishh-kumarr">krishh-kumarr</a>
+  </p>
 </div>
